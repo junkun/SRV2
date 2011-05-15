@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/file-exit.png</file>
+        <file>images/file-new.png</file>
+        <file>images/file-open.png</file>
+        <file>images/file-save-as.png</file>
+        <file>images/file-save.png</file>
+        <file>images/pause-icon.png</file>
+        <file>images/play-icon.png</file>
+        <file>images/record-icon.png</file>
+        <file>images/stop-icon.png</file>
+        <file>images/audio-volume-high.png</file>
+    </qresource>
+    <qresource prefix="/mainIcons">
+        <file>images/desktop.png</file>
+        <file>images/microphone-icon.jpg</file>
+        <file>images/1300738264_Network.png</file>
+        <file>images/home.png</file>
+        <file>images/todos.png</file>
+        <file>images/genera.png</file>
+        <file>images/group.png</file>
+        <file>images/music.png</file>
+        <file>images/documents.png</file>
+    </qresource>
+    <qresource prefix="/mainApp">
+        <file>images/background.jpg</file>
+        <file>images/lip_analysis_icon.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tvrWindow</class>
+ <widget class="QMainWindow" name="tvrWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>399</width>
+    <height>270</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>340</width>
+    <height>270</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>680</width>
+    <height>540</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SRV-Player</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources/tvr-res.qrc">
+    <normaloff>:/mainApp/images/lip_analysis_icon.png</normaloff>:/mainApp/images/lip_analysis_icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> QPushButton {
+     color: white;
+     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+     border-width: 1px;
+     border-color: #339;
+     border-style: solid;
+     border-radius: 7;
+     padding: 3px;
+     padding-left: 5px;
+     padding-right: 5px;
+
+
+ }
+</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+     color: white;
+     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+     border-width: 1px;
+     border-color: #339;
+     border-style: solid;
+     border-radius: 7;
+     padding: 3px;
+     padding-left: 5px;
+     padding-right: 5px;
+
+
+ }
+</string>
+   </property>
+   <widget class="QFrame" name="recordingInformationLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>4</y>
+      <width>331</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+     color: white;
+     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+     border-width: 1px;
+     border-color: #339;
+     border-style: solid;
+     border-radius: 7;
+     padding: 3px;
+     padding-left: 5px;
+     padding-right: 5px;
+
+
+ }
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>0</y>
+       <width>171</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Información de Archivo</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="fileNameLabel">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>21</y>
+       <width>141</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nombre de Archivo:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="fileNameEditLabel">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>21</y>
+       <width>131</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lengthFieldLabel">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>39</y>
+       <width>71</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Longitud:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lengthFieldEditLabel">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>39</y>
+       <width>21</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="secondsLabel">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>38</y>
+       <width>31</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>segs</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QProgressBar" name="tvrProgressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>149</y>
+      <width>321</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="textVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statusLabel">
+    <property name="geometry">
+     <rect>
+      <x>11</x>
+      <y>116</y>
+      <width>62</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Estado:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statusLabelEdit">
+    <property name="geometry">
+     <rect>
+      <x>71</x>
+      <y>116</y>
+      <width>171</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>None</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>399</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>&amp;Archivos</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionVolume"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuControls">
+    <property name="title">
+     <string>&amp;Controles</string>
+    </property>
+    <addaction name="actionRecord"/>
+    <addaction name="actionPaused"/>
+    <addaction name="actionPlay"/>
+    <addaction name="actionStop"/>
+   </widget>
+   <addaction name="fileMenu"/>
+   <addaction name="menuControls"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string/>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionRecord"/>
+   <addaction name="separator"/>
+   <addaction name="actionPaused"/>
+   <addaction name="separator"/>
+   <addaction name="actionStop"/>
+   <addaction name="separator"/>
+   <addaction name="actionPlay"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/file-new.png</normaloff>:/images/file-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Nuevo</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/file-open.png</normaloff>:/images/file-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Abrir</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/file-save.png</normaloff>:/images/file-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Guardar</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/file-save-as.png</normaloff>:/images/file-save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Guardar como ...</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/file-exit.png</normaloff>:/images/file-exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Sali</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionRecord">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/record-icon.png</normaloff>:/images/record-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Grabar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionPaused">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/pause-icon.png</normaloff>:/images/pause-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Pausa</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/play-icon.png</normaloff>:/images/play-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Reproducir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+P</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/stop-icon.png</normaloff>:/images/stop-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Detener</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;Acerca de TT </string>
+   </property>
+  </action>
+  <action name="actionVolume">
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/images/audio-volume-high.png</normaloff>:/images/audio-volume-high.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open &amp;Volume Control</string>
+   </property>
+  </action>
+  <action name="actionAbout_TT">
+   <property name="text">
+    <string>About TT</string>
+   </property>
+  </action>
+  <action name="actionAcerca">
+   <property name="text">
+    <string>Acerca</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources/tvr-res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

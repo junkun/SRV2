@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>730</width>
+    <height>356</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>100</horstretch>
+    <verstretch>100</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema de Reconocimiento de Voz</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../practica-build-desktop/images/lip_analysis_icon.png</normaloff>../../practica-build-desktop/images/lip_analysis_icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> QPushButton {
+     color: white;
+     background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #88d, stop: 0.1 #99e, stop: 0.49 #77c, stop: 0.5 #66b, stop: 1 #77c);
+     border-width: 1px;
+     border-color: #339;
+     border-style: solid;
+     border-radius: 7;
+     padding: 3px;
+     padding-left: 5px;
+     padding-right: 5px;
+
+
+ }
+</string>
+  </property>
+  <widget class="QPushButton" name="managerButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>191</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Gestionar Identidad</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../practica-build-desktop/images/documents.png</normaloff>../../practica-build-desktop/images/documents.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="trainnerButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>140</y>
+     <width>146</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Entrenar red</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/mainIcons/images/1300738264_Network.png</normaloff>:/mainIcons/images/1300738264_Network.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="close">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>20</y>
+     <width>93</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/mainIcons/images/desktop.png</normaloff>:/mainIcons/images/desktop.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>240</y>
+     <width>141</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Gestión de datos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="reporterButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>270</y>
+     <width>172</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Generar reporte</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/mainIcons/images/todos.png</normaloff>:/mainIcons/images/todos.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="identifierButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>140</y>
+     <width>141</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Identificar</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/mainIcons/images/home.png</normaloff>:/mainIcons/images/home.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="corpusButton">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>270</y>
+     <width>159</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>5</width>
+     <height>5</height>
+    </size>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Corpus de Voz</string>
+   </property>
+   <property name="icon">
+    <iconset resource="resources/tvr-res.qrc">
+     <normaloff>:/mainIcons/images/group.png</normaloff>:/mainIcons/images/group.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>100</y>
+     <width>161</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Gestión de Identidad</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources/tvr-res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>close</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>682</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>704</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>identifierButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>openIdentifier()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>510</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>364</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trainnerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>openTrainner()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>357</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>254</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>managerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>openManager()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>84</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>corpusButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>openCorpus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>206</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>74</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>reporterButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>openIdentities()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>486</x>
+     <y>224</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>conectar()</slot>
+  <slot>openRecord()</slot>
+  <slot>abrir()</slot>
+  <slot>openIdentifier()</slot>
+  <slot>openTrainner()</slot>
+  <slot>openAgenda()</slot>
+  <slot>openManager()</slot>
+  <slot>openCorpus()</slot>
+  <slot>openIdentities()</slot>
+ </slots>
+</ui>
